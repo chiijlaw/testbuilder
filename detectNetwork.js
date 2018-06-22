@@ -15,18 +15,32 @@ var detectNetwork = function(cardNumber) {
   // Once you've read this, go ahead and try to implement this function, then return to the console.
   if (cardNumber.length === 14 && cardNumber.charAt(0) === '3'){
   	if (cardNumber.charAt(1) === '8' || cardNumber.charAt(1) === '9') {
-  		return "Diner's Club";
+      console.log("Diner's Club");
+      return "Diner's Club";
   	}
   } else if (cardNumber.length === 15 && cardNumber.charAt(0) === '3') {
   	if (cardNumber.charAt(1) === '4' || cardNumber.charAt(1) === '7') {
-  		return "American Express";
+      console.log("American Express");
+      return "American Express";
   	}
+  } else if (cardNumber.charAt(0) === '4') {
+    if (cardNumber.length === 13 || cardNumber.length === 16 || cardNumber.length === 19) {
+      console.log("Visa");
+      return "Visa";
+    }
+  } else if (cardNumber.length === 16 && cardNumber.charAt(0) === '5') {
+    if (cardNumber.charAt(1) === '1' || cardNumber.charAt(1) === '2' || cardNumber.charAt(1) === '3' || cardNumber.charAt(1) === '4' || cardNumber.charAt(1) === '5') {
+      console.log("MasterCard");
+      return "MasterCard";
+    }
   }
 };
 
-console.log(detectNetwork('373456789012345'));
-console.log(detectNetwork('38345678901234'));
-detectNetwork('38345678901234');
-detectNetwork('39345678901234');
-detectNetwork('343456789012345');
-detectNetwork('373456789012345');
+//console.log(detectNetwork('373456789012345'));
+//console.log(detectNetwork('343456789012345'));
+//console.log(detectNetwork('38345678901234'));
+//console.log(detectNetwork('39345678901234'));
+//detectNetwork('38345678901234');
+//detectNetwork('39345678901234');
+//detectNetwork('343456789012345');
+//detectNetwork('373456789012345');
