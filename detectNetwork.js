@@ -24,4 +24,9 @@ var detectNetwork = function(cardNumber) {
   }
 };
 
-console.log(detectNetwork('39345678901234'));
+console.log(detectNetwork('373456789012345'));
+console.log(detectNetwork('38345678901234'));
+detectNetwork('38345678901234');
+detectNetwork('39345678901234');
+detectNetwork('343456789012345');
+detectNetwork('373456789012345');
